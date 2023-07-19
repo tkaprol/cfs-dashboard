@@ -1,0 +1,81 @@
+{
+  "name": "eu-projects-eo4up-app-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@react-keycloak/web": "^3.4.0",
+    "@reduxjs/toolkit": "^1.9.7",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.1.6",
+    "axios": "^1.2.4",
+    "chonky": "^2.3.2",
+    "chonky-icon-fontawesome": "^2.3.2",
+    "d3": "^7.9.0",
+    "dayjs": "^1.11.10",
+    "interweave": "^13.1.0",
+    "jest-editor-support": "^31.0.1",
+    "js-base64": "^3.7.5",
+    "keycloak-js": "^25.0.6",
+    "leaflet": "^1.9.4",
+    "leaflet-draw": "^1.0.4",
+    "leaflet-editable": "^1.2.0",
+    "netcdfjs": "^3.0.0",
+    "papaparse": "^5.4.1",
+    "proj4": "^2.9.2",
+    "react": "^18.2.0",
+    "react-antdown": "^1.0.11",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "react-grid-layout": "^1.4.1",
+    "react-iframe": "^1.8.5",
+    "react-json-view-lite": "^0.9.6",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-editable": "^0.2.2",
+    "react-markdown": "^8.0.6",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.7.0",
+    "react-scripts": "^5.0.1",
+    "react-vis-network-graph": "^3.0.1",
+    "recharts": "^2.6.2",
+    "redux": "^4.2.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^1.0.0",
+    "runtime-env-cra": "^0.2.4",
+    "shpjs": "^6.1.0",
+    "socket.io-client": "^4.7.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development runtime-env-cra --config-name=./public/runtime-env.js && react-scripts start",
+    "dev": "set HTTPS=true&&set SSL_CRT_FILE=./nginx/cert.pem&&set SSL_KEY_FILE=./nginx/key.pem&&react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

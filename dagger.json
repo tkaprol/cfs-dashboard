@@ -1,0 +1,16 @@
+{
+  "name": "cfs-dashboard",
+  "engineVersion": "v0.18.10",
+  "dependencies": [
+    {
+      "name": "k3s",
+      "source": "github.com/marcosnils/daggerverse/k3s@833ec36632b2457862f6e3bf1f7107ad65e3e515"
+    },
+    {
+      "name": "trivy",
+      "source": "github.com/jpadams/daggerverse/trivy@9890b76992bf840bad7b36625b9e45df31fadde9"
+    }
+  ],
+  "sdk": "python",
+  "source": "dagger"
+}

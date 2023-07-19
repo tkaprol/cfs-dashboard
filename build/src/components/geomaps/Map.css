@@ -1,0 +1,53 @@
+.info {
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  padding: 10px 12px; /* Increased padding for better spacing */
+  border-radius: 8px; /* More rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  font-size: 14px; /* Font size */
+  line-height: 20px; /* Increased line height for better readability */
+  max-width: 500px; /* Set a max-width for the legend */
+  max-height: 800px; /* Set a max height for the legend */
+  overflow-y: auto; /* Allow vertical scrolling */
+  z-index: 1000; /* Ensure it stays above other map elements */
+}
+
+.legend h4 {
+  margin: 0 0 5px; /* Margin adjustment for heading */
+  font-weight: bold; /* Bold heading */
+  text-align: center; /* Center align heading */
+  color: #333; /* Dark color for better contrast */
+}
+
+.legend i {
+  border-radius: 4px; /* Slightly rounded squares */
+  width: 20px; /* Fixed width */
+  height: 20px; /* Fixed height */
+  display: inline-block;
+  margin-right: 8px; /* Space between color icon and text */
+}
+
+.legend i:hover {
+  opacity: 0.8; /* Slightly fade on hover */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.legend .marker {
+  background: #ff7800; /* Marker color */
+}
+
+.legend .circle {
+  background: #1e90ff; /* Circle color */
+}
+
+.legend .polygon {
+  background: #32cd32; /* Polygon color */
+}
+
+/* Adjust text color to dark */
+.info, .info * {
+  color: #333; /* Use a dark color for text */
+}
+.colorPickerLegend{
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,4 @@
+.leaflet-bottom {
+    transform: translateY(100%)!important;
+    bottom: 0;
+  }

@@ -1,0 +1,98 @@
+default_context:
+  chart_name: "cfs-dashboard"
+  chart_namespace: "customer-facing-services"
+  chart_version: "0.1.138"
+  need_dep_chart: "no"
+  include_deployment: "yes"
+  deployment_image_repo: "registry.apps.eo4eu.eu/eo4eu/eo4eu-umm/customer-facing-services/cfs-dashboard"
+  deployment_image_tag: "5154ed0700d53eda6f6c5aa37c7139c58a14a276"
+  deployment_image_pull_policy: "Always"
+  deployment_vault_secret: "react-console-secrets"
+  deployment_image_secret: "cfs-dashboard-registry"
+  deployment_http_port: "80"
+  deployment_app: "cfs-dashboard"
+  deployment_replicas: "2"
+  deployment_environment_label: "production"
+  deployment_service_label: "CFS"
+  deployment_component_label: "cfs-dashboard"
+  include_ingress: "yes"
+  ingress_clusterissuer: "cineca-eo4eu-ope-clusterissuer"
+  ingress_host: "dashboard.apps.eo4eu.eu"
+  ingress_ip_address: "131.175.205.81"
+  ingress_path_type: "Prefix"
+  ingress_path: "/"
+  ingress_tls_enabled: "True"
+  ingress_probe_enabled: "true"
+  ingress_probe_target_auth_type: "none"
+  ingress_probe_target_path: ""
+  include_configmap: "no"
+  include_role: "no"
+  include_role_binding: "no"
+  include_service_account: "no"
+  include_service: "yes"
+  service_http_port: "80"
+  include_external_vault_secret: "yes"
+  include_external_registry_secret: "yes"
+  external_vault_secret_data:
+    "data": [
+      {
+        secret_key: "REACT_APP_API_ROOT_URI",
+        vault_secret_key: "eo4eu-cicd/mixed_credentials/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: "REACT_APP_API_ROOT_URI"
+      },
+      {
+        secret_key: "REACT_APP_CLIENT_ID",
+        vault_secret_key: "eo4eu-cicd/mixed_credentials/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: "REACT_APP_CLIENT_ID"
+      },
+      {
+        secret_key: "REACT_APP_CONSOLE_URI",
+        vault_secret_key: "eo4eu-cicd/mixed_credentials/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: "REACT_APP_CONSOLE_URI"
+      },
+      {
+        secret_key: "REACT_APP_DSL_API_ROOT_URI",
+        vault_secret_key: "eo4eu-cicd/mixed_credentials/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: "REACT_APP_DSL_API_ROOT_URI"
+      },
+      {
+        secret_key: "REACT_APP_KEYCLOAK_URL",
+        vault_secret_key: "eo4eu-cicd/mixed_credentials/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: "REACT_APP_KEYCLOAK_URL"
+      },
+      {
+        secret_key: "REACT_APP_KG_API_ROOT_URI",
+        vault_secret_key: "eo4eu-cicd/mixed_credentials/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: "REACT_APP_KG_API_ROOT_URI"
+      },
+      {
+        secret_key: "REACT_APP_OPENID_CONNECT_URL",
+        vault_secret_key: "eo4eu-cicd/mixed_credentials/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: "REACT_APP_OPENID_CONNECT_URL"
+      },
+      {
+        secret_key: "REACT_APP_REALM_NAME",
+        vault_secret_key: "eo4eu-cicd/mixed_credentials/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: "REACT_APP_REALM_NAME"
+      },
+      {
+        secret_key: "REACT_APP_WORKFLOW_EDITOR_URI",
+        vault_secret_key: "eo4eu-cicd/mixed_credentials/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: "REACT_APP_WORKFLOW_EDITOR_URI"
+      },
+      {
+        secret_key: "REACT_APP_XR_VR_URL",
+        vault_secret_key: "eo4eu-cicd/mixed_credentials/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: "REACT_APP_XR_VR_URL"
+      }
+    ]
+  external_registry_secret_name: "cfs-dashboard-registry"
+  k8s_registry_secret_name: "cfs-dashboard-registry"
+  external_registry_secret_data:
+    "data": [
+      {
+        secret_key: "dockerconfigjson",
+        vault_secret_key: "eo4eu-cicd/registry_pull_secret/eo4eu-umm/cfs-dashboard",
+        vault_secret_property: ".dockerconfigjson"
+      }
+    ]
