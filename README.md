@@ -1,6 +1,6 @@
 # EO4EU Dashboard
 
-Before running this project, you should have a local instance of KeyCloack,
+Before running this project, you should have a local instance of KeyCloak,
 and OpenEO API Running
 
 ## Run Project
@@ -13,5 +13,5 @@ Run Program
 
 ### `npm start`
 
-Ensure the correct setup of KeyCloack Realm and Clients
+Ensure the correct setup of KeyCloak Realm and Clients
 
